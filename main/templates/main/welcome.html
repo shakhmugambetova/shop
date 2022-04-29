@@ -1,0 +1,15 @@
+{%extends 'main/base.html'%}
+{% block title%}Welcome page{%endblock%}
+
+{%block body%}
+
+<a href="{% url 'main:index_page' %}">Link to main page</a>
+
+
+<h1>Welcome, {{username}}</h1>
+<h2>Have a nice day</h2>
+
+
+
+
+{%endblock%}

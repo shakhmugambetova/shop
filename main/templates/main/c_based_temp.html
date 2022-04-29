@@ -1,0 +1,16 @@
+{% extends "main/base.html" %}
+{%load static%}
+{% block title%}Main-page-ALT{%endblock%}
+{% block body %}
+
+
+<h1>HELLO, {{name}}</h1>
+<h1>Class based template view</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<img src="{% static 'main/my_phoo.png' %}" alt="photo">
+<p>
+
+<a href="{% url 'main:welcome_page'%}"> Link to welcome page</a>
+
+{%endblock%}

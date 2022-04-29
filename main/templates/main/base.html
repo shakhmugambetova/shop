@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+     {% load static%}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.css'%}/>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {%block title%}
+
+      {% endblock %}
+
+    </title>
+
+  </head>
+  <body>
+{%if request.user.is_authenticated%}
+<li class="nav-item">
+  <a class="nav-link active" href="{%url 'main:logout_page'%}">Выйти</a>
+</li>
+{%else%}
+<li class="nav-item">
+  <a class="nav-link active" href="{%url 'main:login_page'%}">Войти</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="{%url 'main:register_page'%}">Регистрация</a>
+</li>
+{%endif%}
+
+    <ul class="nav">
+
+
+    </ul>
+    {%block body%}
+    {%endblock%}
+
+  </body>
+</html>

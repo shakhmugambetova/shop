@@ -1,0 +1,12 @@
+{%extends "main/base.html"%}
+{%load static%}
+{% block title%} Кабинет {%endblock%}
+{%block body %}
+
+<h3>username = {{request.user.username}}</h3>
+<h3>pass = {{request.user.password}}</h3>
+<h3>name = {{request.user.first_name}}</h3>
+<h3>last_name = {{request.user.last_name}}</h3>
+<h3>email= {{request.user.email}}</h3>
+
+{%endblock%}
